@@ -1,4 +1,5 @@
 import pygame
+from pygame.sprite import Sprite
 
 class RollingBackground:
     def __init__(self, dr_game):
@@ -35,25 +36,33 @@ class RollingBackground:
 
 
 
-class Obstacle1:
+class Obstacle1(Sprite):
     def __init__(self, dr_game):
         """initialize the obstacle and set its starting position"""
+        super().__init__()
         self.screen = dr_game.screen
         self.screen_rect = dr_game.screen.get_rect()
 
         #load obstacle image and its rect
         self.image = pygame.image.load('images/obstacle1.png')
         self.rect = self.image.get_rect()
+        #self.hitbox = self.rect.inflate(-49, -72)
+        self.hitbox = pygame.Rect(0,0,1,1)
+        self.hitbox.center = self.rect.center
 
         #set position for obstacle when game starts
         self.rect.x = 900
         self.rect.y = 275
 
+        self.hit = False
+
     def update(self):
         self.rect.x -= 2
+        self.hitbox.center = self.rect.center
 
         if self.rect.right <= 0:
             self.rect.x = 1200
+            self.hit = False
 
 
     def blitme(self):

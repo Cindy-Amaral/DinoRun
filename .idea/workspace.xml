@@ -4,29 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15c92112-77ce-4fcc-8d08-c436168038b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/DinoRun.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/cartoon-jump-6462.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/game-music-loop-3-144252.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/gta-v-wasted-death-sound.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/perfect-fart.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/skibidi-toilet.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/spongebob-fail.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dino.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Custom Edited - Yoshi Customs - Yoshi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/heart_gray.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/obstacle1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/yoshi1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/yoshi2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scene.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+    <list default="true" id="15c92112-77ce-4fcc-8d08-c436168038b1" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scene.py" beforeDir="false" afterPath="$PROJECT_DIR$/scene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,9 +62,20 @@
       <option name="presentableId" value="Default" />
       <updated>1717547126046</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1717634766720</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717634766720</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>
