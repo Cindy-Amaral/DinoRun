@@ -71,6 +71,51 @@ class DinoRun:
                         sys.exit()
             pygame.display.update()
 
+    def gameover_menu(self):
+        while True:
+            self.screen.fill(self.bg_color)
+            menu_mouse_pos = pygame.mouse.get_pos()
+            menu_text = self.get_font(100).render("GAME OVER", True, '#cc3232')
+            menu_rect = menu_text.get_rect(center=(640,100))
+
+            restart_button = Button(image=pygame.image.load("images/Restart Rect.png"), pos=(640, 250),
+                            text_input="RESTART", font=self.get_font(75), base_color="#d7fcd4", hovering_color="White")
+            quit_button = Button(image=pygame.image.load("images/Quit Rect.png"), pos=(640, 450),
+                                 text_input="QUIT", font=self.get_font(75), base_color="#d7fcd4", hovering_color="White")
+
+            self.screen.blit(menu_text, menu_rect)
+
+            for button in [restart_button, quit_button]:
+                button.changeColor(menu_mouse_pos)
+                button.update(self.screen)
+
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+                elif event.type == pygame.MOUSEBUTTONDOWN:
+                    if restart_button.checkForInput(menu_mouse_pos):
+                        self.reset_game()
+                        self.run_game()
+                    elif quit_button.checkForInput(menu_mouse_pos):
+                        pygame.quit()
+                        sys.exit()
+            pygame.display.update()
+
+    def reset_game(self):
+        # Reset game variables to initial state
+        self.stats.hearts_left = 3
+        self.score = 0
+        self.dino_invulnerable_frames = 240
+
+        # Reset hearts
+        for heart in self.hearts:
+            heart.rect.y = 550
+
+        # Reset obstacles
+        self.obstacles.empty()
+        self.generate_obstacles(num_obstacles=11, start_x=900, min_distance=100, max_distance=200)
+
     def generate_obstacles(self, num_obstacles, start_x, min_distance, max_distance):
         #generate random x positions for obstacles
         distances = np.cumsum(np.random.randint(min_distance, max_distance, size=num_obstacles - 1))
@@ -147,7 +192,7 @@ class DinoRun:
             self._update_screen()
             pygame.mixer.music.stop()
             pygame.mixer.Sound.play(self.end_sound)
-            sleep(1.5)
+            self.gameover_menu()
 
     def _check_collision(self):
         """Check for collisions between the dino and obstacles"""
